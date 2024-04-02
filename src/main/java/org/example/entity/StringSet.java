@@ -31,10 +31,6 @@ public class StringSet {
 
         String str = testString.toLowerCase();
         str = str.replaceAll("[^a-zA-Z\\s]", "");
-        str = str.replaceAll("\\.", "");
-        str = str.replaceAll("!", "");
-        str = str.replaceAll("\\?", "");
-        str = str.replaceAll(",", "");
 
         String[] words =  str.split(" ");
         TreeSet<String> uniqueWords = new TreeSet<>();

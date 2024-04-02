@@ -45,13 +45,15 @@ public class TaskData {
     }
 
     public Set<Task> getIntersection(Set<Task> set1, Set<Task> set2){
-        set1.retainAll(set2);
-        return set1;
+        Set<Task> intersection = new HashSet<>(set1);
+        intersection.retainAll(set2);
+        return intersection;
     }
 
     public Set<Task> getDifferences(Set<Task> set1, Set<Task> set2){
-        set1.removeAll(set2);
-        return set1;
+        Set<Task> differences = new HashSet<>(set1);
+        differences.removeAll(set2);
+        return differences;
     }
 
 }
